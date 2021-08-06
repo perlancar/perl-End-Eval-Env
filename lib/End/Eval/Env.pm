@@ -25,7 +25,7 @@ END {
 }
 
 1;
-# ABSTRACT: Take code from environment variable(s), then eval it in END block
+# ABSTRACT: Take code from environment variable(s), then eval them in END block
 
 =head1 SYNOPSIS
 
@@ -48,6 +48,10 @@ specified, C<PERL_END_EVAL_ENV> is the default.
 
 
 =head1 ENVIRONMENT
+
+=head2 DEBUG
+
+Bool. Can be turned on to print the code to STDOUT before eval-ing it.
 
 =head2 PERL_END_EVAL_END
 
