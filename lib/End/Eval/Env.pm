@@ -53,7 +53,7 @@ specified, C<PERL_END_EVAL_ENV> is the default.
 
 Bool. Can be turned on to print the code to STDOUT before eval-ing it.
 
-=head2 PERL_END_EVAL_END
+=head2 PERL_END_EVAL_ENV
 
 
 =head1 SEE ALSO
