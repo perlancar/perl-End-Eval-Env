@@ -1,12 +1,16 @@
+# minimalist
+## no critic: TestingAndDebugging::RequireUseStrict
 package End::Eval::Env;
+
+##BEGIN ifunbuilt
+use strict;
+use warnings;
+##END ifunbuilt
 
 # AUTHORITY
 # DATE
 # DIST
 # VERSION
-
-use strict;
-use warnings;
 
 my @envs;
 sub import {
@@ -42,9 +46,11 @@ Customize the environment variables:
 
 =head1 DESCRIPTION
 
-This module allows you to specify code(s) in environment variable(s), basically
-for convenience in one-liners. If name(s) of environment variables are not
-specified, C<PERL_END_EVAL_ENV> is the default.
+This module allows you to evaluate Perl code(s) in environment variable(s), in
+the END block, basically for convenience in one-liners. If name(s) of
+environment variables are not specified, C<PERL_END_EVAL_ENV> is the default.
+
+# INSERT_BLOCK_FROM_MODULE: End::Eval::FirstArg description
 
 
 =head1 ENVIRONMENT
@@ -58,8 +64,11 @@ Bool. Can be turned on to print the code to STDOUT before eval-ing it.
 
 =head1 SEE ALSO
 
-Other C<End::Eval::*> (like L<End::Eval> and L<End::Eval::FirstArg>) and
-C<End::*> modules.
+Other C<End::Eval::*> modules, like L<End::Eval::FirstArg>.
+
+Other C<End::*> modules.
+
+Other C<Begin::Eval::*> modules.
 
 Other C<Devel::End::*> modules (but this namespace is deprecated in favor of
 C<End>).
